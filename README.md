@@ -10,6 +10,10 @@
 This is a modification for Discord.js v11.6.4. This version is used for user botting.
 This version add some utils method and resolve some bugs for simplify some actions.
 
+### MessageEmbed
+1. Added the `data` property, this property store the API-compatible JSON for this embed.
+2. Added to mesage `MessageEmbed` class the method `toJson()` for get the embed as json object.
+
 ## About
 discord.js is a powerful [node.js](https://nodejs.org) module that allows you to interact with the
 [Discord API](https://discordapp.com/developers/docs/intro) very easily.
