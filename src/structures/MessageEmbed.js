@@ -19,6 +19,8 @@ class MessageEmbed {
     this.message = message;
 
     this.setup(data);
+
+    this.data = { ...data }
   }
 
   setup(data) {
@@ -121,6 +123,15 @@ class MessageEmbed {
     let col = this.color.toString(16);
     while (col.length < 6) col = `0${col}`;
     return `#${col}`;
+  }
+
+
+  /**
+   *  Custom method that returns the API-compatible JSON for this embed.
+   *  https://discord-api-types.dev/api/discord-api-types-v10/interface/APIEmbed
+   */
+  toJson() {
+    return { ...this.data }
   }
 }
 

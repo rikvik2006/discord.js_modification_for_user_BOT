@@ -7,7 +7,7 @@ class MessageCreateAction extends Action {
 
     const channel = client.channels.get((data instanceof Array ? data[0] : data).channel_id);
     const user = client.users.get((data instanceof Array ? data[0] : data).author.id);
-    if (channel) {
+    if (channel && typeof channel._cacheMessage === "function") {
       const member = channel.guild ? channel.guild.member(user) : null;
       if (data instanceof Array) {
         const messages = new Array(data.length);

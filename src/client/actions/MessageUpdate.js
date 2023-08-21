@@ -6,7 +6,7 @@ class MessageUpdateAction extends Action {
     const client = this.client;
 
     const channel = client.channels.get(data.channel_id);
-    if (channel) {
+    if (channel && channel.messages) {
       const message = channel.messages.get(data.id);
       if (message) {
         message.patch(data);
