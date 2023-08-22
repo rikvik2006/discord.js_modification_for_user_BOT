@@ -129,6 +129,7 @@ class MessageEmbed {
   /**
    *  Custom method that returns the API-compatible JSON for this embed.
    *  https://discord-api-types.dev/api/discord-api-types-v10/interface/APIEmbed
+   *  @type {APIEmbed}
    */
   toJson() {
     return { ...this.data }
